@@ -1,5 +1,6 @@
-
 <div class="row">
- <div class="col-sm-4 offset-4">
-     <%= Time.at(Time.now - 10800).utc.strftime("%H:%M:%S")  %>
+  <div class="col-sm-4 offset-sm-4">
+    <%# Brasília time (UTC-3), using the time-zone database instead of a hard-coded offset %>
+    <%= Time.current.in_time_zone("America/Sao_Paulo").strftime("%H:%M:%S") %>
+  </div>
 </div>
